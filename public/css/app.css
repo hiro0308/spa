@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+/* =========================================================== */
+
+/* ベース */
+
+/* =========================================================== */
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  color: #444;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* =========================================================== */
+
+/* レイアウト */
+
+/* =========================================================== */
+
+.container {
+  margin-top: 80px;
+}
+
+.main {
+  height: 95vh;
+}
+
+.site-width {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================== */
+
+/* ヘッダー */
+
+/* =========================================================== */
+
+.header {
+  box-shadow: 5px 0px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.header-title {
+  font-size: 24px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.header-subTitle {
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  padding-left: 15px;
+  vertical-align: middle;
+}
+
+.header-nav {
+  background: #1097CC;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.header-link:hover {
+  text-decoration: none;
+}
+
+/* =========================================================== */
+
+/* ホーム */
+
+/* =========================================================== */
+
+.home-form {
+  text-align: center;
+  margin-top: -30px;
+}
+
+.home-category {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.home-description {
+  background: #fff;
+  padding: 60px;
+  width: 600px;
+  border-radius: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.home-anounce {
+  color: #FF1A4B;
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+/* =========================================================== */
+
+/* 問題 */
+
+/* =========================================================== */
+
+.quiz-title {
+  border-bottom: 3px solid #000;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+.quiz-anounce {
+  padding-left: 10px;
+}
+
+.quiz-problem::before {
+  content: "\F128";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: #fff;
+  border: #000;
+  padding: 10px;
+  background: #1097CC;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.quiz-answer::before {
+  content: "\F521";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: #fff;
+  border: #000;
+  padding: 10px;
+  background: #1097CC;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.quiz-commentary::before {
+  content: "\F518";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: #fff;
+  border: #000;
+  padding: 10px;
+  background: #1097CC;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.quiz-select {
+  background: #99E2FF;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.quiz-number {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-right: 10px;
+}
+
+.quiz-number:hover {
+  cursor: pointer;
+}
+
+.quiz-item {
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.quiz-item:last-child {
+  margin-bottom: inherit;
+}
+
+.quiz-category {
+  margin: 3px 0 0 0;
+  text-align: right;
+  padding-right: 30px;
+}
+
+/* =========================================================== */
+
+/* answer */
+
+/* =========================================================== */
+
+.answer-num {
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.answer-correct {
+  background: #CCF1FF;
+  color: #00B7FF;
+}
+
+.answer-incorrect {
+  background: #FFBBDD;
+  color: #FF1A4B;
+}
+
+.answer-correct,
+.answer-incorrect {
+  padding: 15px;
+  border-radius: 3px;
+}
+
+/* =========================================================== */
+
+/* 解説 */
+
+/* =========================================================== */
+
+.commentary {
+  padding-bottom: 50px;
+}
+
+.commentary-text {
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+
+/* =========================================================== */
+
+/* モーダル */
+
+/* =========================================================== */
+
+.modalArea {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.modal-text {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
+
+.modal-num {
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+/* 以下ボタンスタイル */
+
+button {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#openModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =========================================================== */
+
+/* ボタン */
+
+/* =========================================================== */
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-start {
+  padding: 30px;
+  font-size: 30px;
+  display: block;
+  margin: 80px auto;
+  border-radius: 50px;
+  background: orange;
+  color: #fff;
+  border: none;
+  width: 400px;
+}
+
+.btn-submit {
+  border: none;
+  border-radius: 3px;
+  background: #3387AB;
+  color: #fff;
+  padding: 10px 15px;
+  margin-left: auto;
+  display: block;
+  margin-left: auto;
+}
+
+/* ========================================================== */
+
+/* その他 */
+
+/* =========================================================== */
+
+.bgColor {
+  background: #FFFF66;
+  min-height: 90vh;
+  padding-top: 80px;
+}
+
